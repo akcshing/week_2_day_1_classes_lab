@@ -46,7 +46,7 @@ class TestLibrary < MiniTest::Test
           date: "21/01/19"
         }
       }
-    ], @library_1.existing_books())
+      ], @library_1.existing_books())
   end
 
   def test_get_books_array__empty
@@ -56,21 +56,23 @@ class TestLibrary < MiniTest::Test
 
   def test_find_book
     book_name = "Martian"
-    assert_equal({
-      title: "Martian",
-      rental_details: {
-        student_name: "Alex",
-        date: "21/01/19"
-      }
-    }, @library_1.get_book(book_name))
+    assert_equal(
+      {
+        title: "Martian",
+        rental_details: {
+          student_name: "Alex",
+          date: "21/01/19"
+        }
+      }, @library_1.get_book(book_name))
   end
 
   def test_return_rental_details_for_book_name
     book_name = "Martian"
-    assert_equal({
-      student_name: "Alex",
-      date: "21/01/19"
-    }, @library_1.rent_det(book_name))
+    assert_equal(
+      {
+        student_name: "Alex",
+        date: "21/01/19"
+      }, @library_1.rent_det(book_name))
   end
 
   def test_add_book
@@ -84,21 +86,22 @@ class TestLibrary < MiniTest::Test
           date: ""
         }
       }, @library_1.existing_books[-1])
-      end
+  end
 
-    def test_modify_rental_details
+  def test_modify_rental_details
 
-      book_title = "Martian"
-      new_student_name = "John"
-      new_date = "29/01/19"
-      @library_1.modify_rent_det(book_title, new_student_name, new_date)
-      assert_equal({
+    book_title = "Martian"
+    new_student_name = "John"
+    new_date = "29/01/19"
+    @library_1.modify_rent_det(book_title, new_student_name, new_date)
+    assert_equal(
+      {
         title: "Martian",
         rental_details: {
           student_name: "John",
           date: "29/01/19"
-        }
+          }
       }, @library_1.get_book(book_title)) #could use rent_det method also
-    end
+  end
 
 end
