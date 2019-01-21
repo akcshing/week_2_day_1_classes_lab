@@ -29,4 +29,8 @@ class Student
     return @speech
   end
 
+  def fav_language
+    return "#{@name}'s favourite programming language is #{@fav_lang}!"
+  end
+
 end

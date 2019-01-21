@@ -33,7 +33,7 @@ class TestStudent < MiniTest::Test
   end
 
   def test_return_favourite_language__string
-    assert_equal("Alex's favourite programming language is Ruby!", @student.fav_language(@fav_lang))
+    assert_equal("Alex's favourite programming language is Ruby!", @student.fav_language())
   end
 
 
