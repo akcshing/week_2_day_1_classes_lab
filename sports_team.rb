@@ -31,7 +31,7 @@ class SportsTeam
   end
 
   def add_point?(result)
-    @team_points += 1 if result = "win"
+    @team_points += 1 if result == "win"
   end
 
 
