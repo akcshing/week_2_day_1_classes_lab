@@ -87,6 +87,7 @@ class TestLibrary < MiniTest::Test
       end
 
     def test_modify_rental_details
+
       book_title = "Martian"
       new_student_name = "John"
       new_date = "29/01/19"
