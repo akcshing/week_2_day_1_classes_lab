@@ -19,4 +19,16 @@ class Library   # creates the class library, whose objects are a particular libr
     end
   end
 
+  def add_new_book(new_book_title)
+
+    new_book_hash = {
+      title: new_book_title,
+      rental_details: {
+        student_name: "",
+        date: ""
+      }
+    }
+    @existing_books << new_book_hash
+  end
+
 end

@@ -76,12 +76,14 @@ class TestLibrary < MiniTest::Test
   def test_add_book
     new_book_title = "Ruby for Dummies"
     @library_1.add_new_book(new_book_title)
-    assert_equal({
-      title: "Ruby for Dummies",
-      rental_details: {
-        student_name: "",
-        date: ""
+    assert_equal(
+      {
+        title: "Ruby for Dummies",
+        rental_details: {
+          student_name: "",
+          date: ""
+        }
       }, @library_1.existing_books[-1])
-    end
+      end
 
 end
