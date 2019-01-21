@@ -2,10 +2,11 @@ class Student
 
 # attr_reader :name, :cohort
 
-  def initialize(name, cohort, speech)
+  def initialize(name, cohort, speech, fav_lang)
     @name = name
     @cohort = cohort
     @speech = speech
+    @fav_lang = fav_lang
   end
 
   def get_name

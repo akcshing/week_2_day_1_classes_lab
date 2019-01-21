@@ -7,7 +7,7 @@ class TestStudent < MiniTest::Test
 
 
   def setup
-    @student = Student.new("Alex", "E28", "I can talk!")
+    @student = Student.new("Alex", "E28", "I can talk!", "Ruby")
   end
 
   def test_get_name
@@ -31,5 +31,10 @@ class TestStudent < MiniTest::Test
   def test_student_speak # testing another getter
     assert_equal("I can talk!", @student.get_speech())
   end
+
+  def test_return_favourite_language__string
+    assert_equal("Alex's favourite programming language is Ruby!", @student.fav_language(@fav_lang))
+  end
+
 
 end
