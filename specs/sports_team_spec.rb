@@ -40,4 +40,10 @@ class TestSportsTeam < MiniTest::Test
     player_name = "Player 2"
     assert_equal(true, @team_object.has_player(player_name))
   end
+
+  def test_add_point_if_win
+    result = "win"
+    @team_object.add_point?(result) # the function to test
+    assert_equal(1, @team_object.team_points()) # attr_reader
+  end
 end

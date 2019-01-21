@@ -1,12 +1,13 @@
 class SportsTeam
 
-  attr_reader :team_name, :team_players, :team_coach
+  attr_reader :team_name, :team_players, :team_coach, :team_points # dont forget commas
   attr_writer :team_coach, :team_players
 
   def initialize(team_name, team_players, team_coach)
     @team_name = team_name
     @team_players = team_players
     @team_coach = team_coach
+    @team_points = 0   # adding a new property to the class that doens't require assigning to an input
   end
 
     # def get_team_name
@@ -26,6 +27,9 @@ class SportsTeam
   end
 
   def has_player(player_name)
-    @team_players.include?(player_name) 
+    @team_players.include?(player_name)
   end
+
+
+
 end
