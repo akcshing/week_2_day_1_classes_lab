@@ -6,9 +6,11 @@ require_relative('../student_class')
 class TestStudent < MiniTest::Test
 
 
-def setup
+  def setup
+    @student = Student.new("Alex", "E28")
+  end
 
-  @student = Student.new("Alex", "E28")
-
-
+  def test_get_name
+    assert_equals("Alex", @student.get_name())
+  end
 end
