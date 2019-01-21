@@ -11,6 +11,6 @@ class TestStudent < MiniTest::Test
   end
 
   def test_get_name
-    assert_equals("Alex", @student.get_name())
+    assert_equal("Alex", @student.get_name())
   end
 end
