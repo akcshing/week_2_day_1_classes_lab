@@ -73,4 +73,14 @@ class TestLibrary < MiniTest::Test
     }, @library_1.rent_det(book_name))
   end
 
+  def test_add_book
+    new_book_title = "Ruby for Dummies"
+    assert_equal({
+      title: "Ruby for Dummies",
+      rental_details: {
+        student_name: "",
+        date: ""
+      }, @library_1.existing_books[-1])
+    end
+    
 end
