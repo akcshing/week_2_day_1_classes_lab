@@ -11,6 +11,10 @@ class Student
     return @name
   end
 
+  def get_cohort
+    return @cohort
+  end
+
 
 
 
