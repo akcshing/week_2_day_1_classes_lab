@@ -24,4 +24,8 @@ class Student
     @cohort = new_cohort
   end
 
+  def get_speech
+    return @speech
+  end
+
 end
