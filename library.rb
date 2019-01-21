@@ -13,4 +13,10 @@ class Library   # creates the class library, whose objects are a particular libr
     end
   end
 
+  def rent_det(book_name)
+    for book in @existing_books
+      return book[:rental_details] if book[:title] == book_name
+    end
+  end
+
 end
