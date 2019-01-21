@@ -6,6 +6,9 @@ class TestLibrary < MiniTest::Test
 
   def setup
 
+    @empty_library = Library.new([])
+
+
     @library_1 = Library.new(
       [
         {
@@ -46,6 +49,10 @@ class TestLibrary < MiniTest::Test
     ], @library_1.existing_books())
   end
 
+  def test_get_books_array__empty
+    assert_equal([], @empty_library.existing_books())
+  end
+
 
   def test_find_book
     book_name = "Martian"
@@ -57,5 +64,13 @@ class TestLibrary < MiniTest::Test
       }
     }, @library_1.get_book(book_name))
   end
-  
+
+  def test_return_rental_details_for_book_name
+    book_name = "Martian"
+    assert_equal({
+      student_name: "Alex",
+      date: "21/01/19"
+    }, @library_1.rent_det(book_name))
+  end
+
 end
