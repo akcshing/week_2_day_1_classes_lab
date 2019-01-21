@@ -30,6 +30,9 @@ class SportsTeam
     @team_players.include?(player_name)
   end
 
+  def add_point?(result)
+    @team_points += 1 if result = "win"
+  end
 
 
 end
