@@ -2,9 +2,10 @@ class Student
 
 # attr_reader :name, :cohort
 
-  def initialize(name, cohort)
+  def initialize(name, cohort, speech)
     @name = name
     @cohort = cohort
+    @speech = speech
   end
 
   def get_name
@@ -22,5 +23,5 @@ class Student
   def set_cohort(new_cohort)
     @cohort = new_cohort
   end
-  
+
 end

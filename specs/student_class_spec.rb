@@ -7,7 +7,7 @@ class TestStudent < MiniTest::Test
 
 
   def setup
-    @student = Student.new("Alex", "E28")
+    @student = Student.new("Alex", "E28", "I can talk!")
   end
 
   def test_get_name
@@ -26,6 +26,10 @@ class TestStudent < MiniTest::Test
   def test_set_cohort
     @student.set_cohort("E29")
     assert_equal("E29", @student.get_cohort())
+  end
+
+  def test_student_speak # testing another getter
+    assert_equal("I can talk!", @student.get_speech())
   end
 
 end
