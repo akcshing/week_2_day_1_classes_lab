@@ -26,4 +26,13 @@ class TestSportsTeam < MiniTest::Test
     assert_equal("Mr New Coach", @team_object.team_coach())
   end
 
+  # def test_add_player_to_team   # attr_writer method
+  #   new_player = "New Player"
+  #   assert_equal(["Player 1", "Player 2", "Player 3", "New Player"], @team_object.team_players.push(new_player))
+  # end
+
+  def test_add_player_to_team
+    new_player = "New Player"
+    assert_equal(["Player 1", "Player 2", "Player 3", "New Player"], @team_object.add_new_player(new_player)) # applying method to the object, not the object's attribute
+  end
 end
