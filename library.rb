@@ -36,11 +36,12 @@ class Library   # creates the class library, whose objects are a particular libr
   # "key" => "value"
   # :key => "value"
   # key: "value"
-  
+
   def modify_rent_det(book_title, new_student_name, new_date)
-    rent_det(book_title)[:student_name] = new_student_name
-    rent_det(book_title)[:date] = new_date
+    # rent_det(book_title)[:student_name] = new_student_name
+    # rent_det(book_title)[:date] = new_date
     # rent_det(book_title)[student_name: new_student_name, date: new_date] # attempted refactor
+    get_book(book_title)[:rental_details]={student_name: new_student_name, date: new_date} # passing refactor
     return get_book(book_title)
   end
 

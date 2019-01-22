@@ -6,7 +6,7 @@ class TestLibrary < MiniTest::Test
 
   def setup
 
-    @empty_library = Library.new([])
+    @empty_library = Library.new([])      # .new is == initialize
 
 
     @library_1 = Library.new(
